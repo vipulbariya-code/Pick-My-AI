@@ -81,7 +81,7 @@ Pick-My-AI
 
 ## Homepage
 
-<img src="images/homepage.png" width="100%" alt="Pick My AI Homepage">
+<img src="homepage.png.png" width="100%" alt="Pick My AI Homepage">
 
 ---
 
