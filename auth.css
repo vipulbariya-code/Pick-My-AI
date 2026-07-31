@@ -1,0 +1,194 @@
+/* sign-in signup page mate nu UI styling: dark-to-light gradient, forms, buttons; */
+:root {
+  --bg-start: #050507;
+  --bg-mid: #1e1e26;
+  --bg-end: #f2f4f8;
+  --surface: rgba(12, 12, 14, 0.8);
+  --surface-border: rgba(255, 255, 255, 0.12);
+  --text: #f5f7fb;
+  --muted: #a6adbb;
+  --input-bg: #e6eaf2;
+  --input-text: #111421;
+  --primary: #1b68f4;
+  --danger: #ff5f6d;
+  --success: #1ac985;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Manrope", sans-serif;
+  color: var(--text);
+  background: linear-gradient(
+    130deg,
+    var(--bg-start) 5%,
+    var(--bg-mid) 45%,
+    var(--bg-end) 95%
+  );
+  background-size: 220% 220%;
+  animation: bgShift 10s ease-in-out infinite alternate;
+  display: grid;
+  place-items: center;
+  padding: 28px 14px;
+}
+
+@keyframes bgShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Light mode mate nu styling */
+body.light {
+  --surface: rgba(255, 255, 255, 0.88);
+  --surface-border: rgba(5, 10, 22, 0.12);
+  --text: #0d1325;
+  --muted: #4f607f;
+  --input-bg: #f7f9fc;
+  --input-text: #151a2b;
+  --bg-start: #f7faff;
+  --bg-mid: #eef4ff;
+  --bg-end: #ffffff;
+}
+
+.auth-shell {
+  width: 100%;
+  max-width: 560px;
+}
+
+.theme-toggle {
+  margin: 0 0 16px auto;
+  border: 1px solid var(--surface-border);
+  color: var(--text);
+  background: transparent;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.auth-card {
+  border: 1px solid var(--surface-border);
+  background: var(--surface);
+  backdrop-filter: blur(6px);
+  border-radius: 22px;
+  padding: 28px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.22);
+}
+
+.brand {
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #13d2b6, #1662f6);
+  margin: 0 auto 20px;
+  font-size: 28px;
+}
+
+h1 {
+  margin: 0 0 8px;
+  text-align: center;
+}
+
+.subtitle {
+  margin: 0 0 24px;
+  text-align: center;
+  color: var(--muted);
+}
+
+.field-wrap {
+  margin-bottom: 14px;
+}
+
+label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+input {
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid transparent;
+  background: var(--input-bg);
+  color: var(--input-text);
+  padding: 14px;
+  font-size: 16px;
+  outline: none;
+}
+
+input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(27, 104, 244, 0.2);
+}
+
+.field-error {
+  min-height: 18px;
+  font-size: 13px;
+  color: var(--danger);
+  margin-top: 6px;
+}
+
+.field-ok {
+  color: var(--success);
+}
+
+.remember-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 6px 0 14px;
+  color: var(--muted);
+}
+
+.remember-row input {
+  width: auto;
+}
+
+.submit-btn {
+  width: 100%;
+  border: 0;
+  border-radius: 14px;
+  padding: 14px;
+  background: #ffffff;
+  color: #0f1422;
+  font-size: 22px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.status {
+  min-height: 20px;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.switch {
+  text-align: center;
+  margin-top: 16px;
+  color: var(--muted);
+}
+
+.switch a {
+  color: var(--text);
+  font-weight: 800;
+}
+
+@media (max-width: 620px) {
+  .auth-card {
+    padding: 22px 16px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+}

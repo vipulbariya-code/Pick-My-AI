@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+  <main class="contact-page">
+    <section class="hero">
+      <div class="container hero-content">
+        <!-- Hero badge aur title section shuru -->
+        <div class="hero-badge">* Get in Touch</div>
+        <h1>Contact Us</h1>
+        <p>We're here to help! Reach out via form, email, or call anytime.</p>
+        <!-- Hero badge aur title section khatam -->
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <div class="container contact-grid">
+        <article class="contact-card">
+          <!-- Form heading aur short instructions -->
+          <h2><span class="headline-icon">-></span> Send us a Message</h2>
+          <p class="card-subtext">Fill out the form below and we'll get back to you shortly</p>
+
+          <form id="contactForm" novalidate>
+            <!-- Form fields ka grid layout shuru -->
+            <div class="form-grid">
+              <div class="field">
+                <label for="fullName">Full Name</label>
+                <div class="input-wrap">
+                  <span class="input-icon">U</span>
+                  <input id="fullName" name="fullName" type="text" placeholder="John Doe" required>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="email">Email Address</label>
+                <div class="input-wrap">
+                  <span class="input-icon">@</span>
+                  <input id="email" name="email" type="email" placeholder="john@example.com" required>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="phone">Phone Number</label>
+                <div class="input-wrap">
+                  <span class="input-icon">P</span>
+                  <input id="phone" name="phone" type="tel" placeholder="+91 12345 67890" required>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="subject">Subject / Category</label>
+                <div class="input-wrap select-wrap">
+                  <select id="subject" name="subject" required>
+                    <option value="">Select a category</option>
+                    <option value="general">General Inquiry</option>
+                    <option value="support">Technical Support</option>
+                    <option value="sales">Sales</option>
+                    <option value="partnership">Partnership</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- Message textarea aur submit button -->
+            <div class="field field-full">
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" rows="6" placeholder="Tell us how we can help you..." required></textarea>
+            </div>
+
+            <button type="submit" class="send-btn">-> Send Message</button>
+            <p id="formStatus" class="form-status" aria-live="polite"></p>
+          </form>
+          <!-- Form block khatam -->
+        </article>
+
+        <aside class="quick-contact">
+          <!-- Quick contact cards start -->
+          <h3>Quick Contact</h3>
+
+          <article class="quick-card">
+            <div class="quick-icon blue">@</div>
+            <h4>Email Us</h4>
+            <a href="mailto:support@projectpedia.net">support@projectpedia.net</a>
+          </article>
+
+          <article class="quick-card">
+            <div class="quick-icon green">P</div>
+            <h4>Call Now</h4>
+            <a href="tel:+918490011068">+91 84900 11068</a>
+          </article>
+
+          <article class="quick-card">
+            <div class="quick-icon cyan">C</div>
+            <h4>Live Chat</h4>
+            <a href="#">Start Chat</a>
+          </article>
+          <!-- Quick contact cards end -->
+        </aside>
+      </div>
+    </section>
+
+    <section class="social-section">
+      <div class="container">
+        <!-- Social media link card -->
+        <div class="social-card">
+          <h3>Connect With Us on Social Media</h3>
+          <div class="social-links">
+            <a href="#" aria-label="Website">W</a>
+            <a href="#" aria-label="Twitter">T</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="Instagram">I</a>
+            <a href="#" aria-label="YouTube">Y</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    const statusEl = document.getElementById('formStatus');
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      if (!form.checkValidity()) {
+        statusEl.textContent = 'Please fill all fields with valid details.';
+        statusEl.className = 'form-status error';
+        form.reportValidity();
+        return;
+      }
+
+      const values = Object.fromEntries(new FormData(form).entries());
+      console.log('Contact form submitted:', values);
+
+      statusEl.textContent = 'Message sent successfully. We will contact you shortly.';
+      statusEl.className = 'form-status success';
+      form.reset();
+    });
+  </script>
+</body>
+</html>

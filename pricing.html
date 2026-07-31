@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing | Pick My AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="pricing.css">
+</head>
+<body>
+  <!-- Header nav bar start thay chhe -->
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html#home">
+        <span class="brand-icon">✦</span>
+        <span>Pick My AI</span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#categories">Compare Tools</a>
+        <a href="pricing.html#pricing-cards">Pricing</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-cta">
+        <a class="login" href="signin.html">Login</a>
+        <a class="btn btn-primary" href="signup.html">Get Started</a>
+      </div>
+      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <div class="pricing-page">
+
+    <!-- Hero section chhe aa pricing nu ahi thi details start thay chhe -->
+
+    <header class="pricing-hero">
+      <div class="hero-content">
+        <p class="eyebrow">Simple, Transparent Pricing</p>
+        <h1>Choose the plan that fits your needs - start free, upgrade anytime.</h1>
+        <p>Dare to compare, scale with confidence, and keep every choice crystal clear.</p>
+      </div>
+    </header>
+
+    <!-- Pricing cards grid: Yeh section plans ko side-by-side dikhata hai -->
+
+    <section class="pricing-cards" id="pricing-cards">
+      <div class="cards-grid">
+        <article class="plan-card">
+          <div class="plan-header">
+            <h3>Free</h3>
+            <p>Perfect for trying out Pick My AI</p>
+          </div>
+          <div class="plan-price">
+            <strong>$0</strong>
+            <span>forever</span>
+          </div>
+          <ul class="feature-list">
+            <li>Compare 2 AI tools</li>
+            <li>5 comparisons per day</li>
+            <li>Basic comparison charts</li>
+            <li>AI recommendations</li>
+          </ul>
+          <button type="button" class="plan-btn" data-plan="Free" data-price="$0">Get Started</button>
+        </article>
+
+        <article class="plan-card">
+          <div class="plan-header">
+            <h3>Basic</h3>
+            <p>Great for regular users</p>
+          </div>
+          <div class="plan-price">
+            <strong>$9</strong>
+            <span>/month billed monthly</span>
+          </div>
+          <ul class="feature-list">
+            <li>Compare 3 tools</li>
+            <li>10 comparisons per day</li>
+            <li>Advanced graphs</li>
+            <li>Newsletter insights</li>
+            <li>Priority support</li>
+          </ul>
+          <button type="button" class="plan-btn" data-plan="Basic" data-price="$9/month">Get Started</button>
+        </article>
+
+        <article class="plan-card plan-popular">
+          <div class="plan-header">
+            <h3>Standard</h3>
+            <p>Best for professionals</p>
+            <span class="popular-badge">Most Popular</span>
+          </div>
+          <div class="plan-price">
+            <strong>$19</strong>
+            <span>/month billed monthly</span>
+          </div>
+          <ul class="feature-list">
+            <li>Compare 5 tools</li>
+            <li>15 comparisons per day</li>
+            <li>Download PDF reports</li>
+            <li>Bookmark favorites</li>
+            <li>Advanced charts</li>
+            <li>Priority support</li>
+          </ul>
+          <button type="button" class="plan-btn" data-plan="Standard" data-price="$19/month">Get Started</button>
+        </article>
+
+        <article class="plan-card">
+          <div class="plan-header">
+            <h3>Pro</h3>
+            <p>For power users and teams</p>
+          </div>
+          <div class="plan-price">
+            <strong>$39</strong>
+            <span>/month billed monthly</span>
+          </div>
+          <ul class="feature-list">
+            <li>Compare up to 10 tools</li>
+            <li>50 comparisons per day</li>
+            <li>Deep data analysis</li>
+            <li>Custom reports</li>
+            <li>API access</li>
+            <li>Dedicated support</li>
+          </ul>
+          <button type="button" class="plan-btn" data-plan="Pro" data-price="$39/month">Get Started</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- Checkout module: Yeh panel plan selection aur payment form dikhata hai -->
+
+    <div class="checkout-panel" id="checkoutPanel" aria-hidden="true">
+      <div class="checkout-card">
+        <button class="checkout-close" aria-label="Close checkout">&times;</button>
+        <div class="checkout-summary">
+          <h3>Checkout</h3>
+          <p>Selected plan:</p>
+          <p class="summary-plan"><span data-selected-plan>Free</span></p>
+          <p class="summary-price"><span data-selected-price>$0</span></p>
+        </div>
+        <form id="checkoutForm">
+          <div class="form-field">
+            <label for="payerName">Name</label>
+            <input id="payerName" name="payerName" type="text" placeholder="Alex Rivera" required>
+          </div>
+          <div class="form-field">
+            <label for="payerEmail">Email</label>
+            <input id="payerEmail" name="payerEmail" type="email" placeholder="alex@email.com" required>
+          </div>
+          <div class="form-field">
+            <label for="cardNumber">Card Number</label>
+            <input id="cardNumber" name="cardNumber" type="text" inputmode="numeric" placeholder="1234 5678 9012 3456" required>
+          </div>
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="expiry">Expiry</label>
+              <input id="expiry" name="expiry" type="text" placeholder="MM/YY" required>
+            </div>
+            <div class="form-field">
+              <label for="cvv">CVV</label>
+              <input id="cvv" name="cvv" type="password" inputmode="numeric" maxlength="4" placeholder="123" required>
+            </div>
+          </div>
+          <button type="submit" class="checkout-btn">Pay Securely</button>
+          <p class="checkout-status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header menu script -->
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const navCta = document.querySelector('.nav-cta');
+
+    if (menuToggle) {
+      menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+        navCta.classList.toggle('open');
+      });
+    }
+  </script>
+
+  <!-- Checkout script: Yeh JavaScript plan selection aur modal toggle handle karta hai -->
+   
+  <script>
+    const checkoutPanel = document.getElementById('checkoutPanel');
+    const selectedPlanEl = document.querySelector('[data-selected-plan]');
+    const selectedPriceEl = document.querySelector('[data-selected-price]');
+    const statusEl = document.querySelector('.checkout-status');
+    const body = document.body;
+
+    document.querySelectorAll('.plan-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        selectedPlanEl.textContent = btn.dataset.plan;
+        selectedPriceEl.textContent = btn.dataset.price;
+        checkoutPanel.classList.add('is-active');
+        checkoutPanel.setAttribute('aria-hidden', 'false');
+        body.classList.add('modal-open');
+        statusEl.textContent = '';
+        statusEl.classList.remove('success');
+      });
+    });
+
+    document.querySelector('.checkout-close').addEventListener('click', () => {
+      checkoutPanel.classList.remove('is-active');
+      checkoutPanel.setAttribute('aria-hidden', 'true');
+      body.classList.remove('modal-open');
+    });
+
+    checkoutPanel.addEventListener('click', (event) => {
+      if (event.target === checkoutPanel) {
+        checkoutPanel.classList.remove('is-active');
+        checkoutPanel.setAttribute('aria-hidden', 'true');
+        body.classList.remove('modal-open');
+      }
+    });
+
+    document.getElementById('checkoutForm').addEventListener('submit', (event) => {
+      event.preventDefault();
+      const form = event.target;
+      if (!form.reportValidity()) {
+        return;
+      }
+      statusEl.textContent = 'Payment simulated. We will follow up via email soon.';
+      statusEl.classList.add('success');
+      form.reset();
+    });
+  </script>
+</body>
+</html>
