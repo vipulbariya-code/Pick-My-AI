@@ -77,8 +77,6 @@ Pick-My-AI
 
 # 📸 Preview
 
-> Add your project screenshots here.
-
 ## Homepage
 
 <img src="homepage.png.png" width="100%" alt="Pick My AI Homepage">
